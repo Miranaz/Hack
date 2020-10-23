@@ -28,7 +28,6 @@ def ceknet():
     	os.system('reset')
         print internet
         print '\r\033[37;1m[\x1b[92m+\033[37;1m] \033[37;1mMeriksa Koneksi Internet'
-        time.sleep(2)
         toolbar_width = 25
         sys.stdout.write('[%s]' % ('-\033[37;1m' * toolbar_width))
         sys.stdout.flush()
@@ -38,21 +37,15 @@ def ceknet():
             sys.stdout.write('\033[37;1m[')
             sys.stdout.write('\033[36;1m#\033[37;1m' * (i + 1))
             sys.stdout.flush()
-            time.sleep(5.0 / 100)
         try:
             rq = requests.get('http://facebook.com')
-            time.sleep(3.5)
             print '\033[37;1m] \033[35;1m~> \033[32;1mSucces '
-            time.sleep(2.0)
             start()
         except requests.exceptions.ConnectionError:
-            time.sleep(3.5)
             print '\033[37;1m]\033[35;1m ~>\033[31;1m Tidak Ada koneksi'
-            time.sleep(1.5)
             sys.exit()
 
     except KeyboardInterrupt:
-    	time.sleep(3.5)
         exit('\n\033[37;1m[\x1b[92mx\033[37;1m] \033[31;1mProgram berhenti\n')
 
 def start():
