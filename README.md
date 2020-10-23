@@ -1,4 +1,4 @@
-# Install
+# ئه‌مانه‌ دابه‌زێنه‌
 ```
 $ pkg update && pkg upgrade
 $ pkg install git
