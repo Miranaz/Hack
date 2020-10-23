@@ -64,9 +64,9 @@ def start():
             total = open(passw, 'r')
             total = total.readlines()
             print '\033[34;1m[\033[37;1m^\033[34;1m] \033[37;1mTarget\033[36;1m :\033[32;1m ' + email
-            time.sleep(3.0)
+            time.sleep(0.1)
             print '\033[34;1m[\033[37;1m^\033[34;1m] \033[37;1mTotal List \033[36;1m:\033[32;1m ' + str(len(total))
-            time.sleep(3.0)
+            time.sleep(0.1)
             print
             sandi = open(passw, 'r')
             for pw in sandi:
